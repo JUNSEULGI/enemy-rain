@@ -1,0 +1,38 @@
+.game {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bg {
+  width: 800px;
+  height: 600px;
+  background-image: url("images/bg.png");
+  position: relative;
+}
+
+#hero {
+  height: 54px;
+  width: 35px;
+  background-image: url("images/hero.png");
+  position: absolute;
+  bottom: 0;
+  left: 383px;
+}
+
+.front-face {
+  background-position: 0 0;
+}
+
+.right-face {
+  background-position: 35px 0;
+}
+
+.left-face {
+  background-position: 70px 0;
+}
+
+.back-face {
+  background-position: 105px 0;
+}
