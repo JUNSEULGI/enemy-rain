@@ -10,32 +10,28 @@ class Hero {
 
   moveLeft() {
     if (this.left > 0) {
-      this.left--;
+      this.left -= 3;
     }
   }
   moveRight() {
     if (this.left < 765) {
-      this.left++;
+      this.left += 3;
     }
   }
   moveUp() {
     if (this.bottom < 546) {
-      this.bottom++;
+      this.bottom += 3;
     }
   }
   moveDown() {
     if (this.bottom > 0) {
-      this.bottom--;
+      this.bottom -= 3;
     }
   }
 }
 
 const myHero = new Hero();
-// const frontHero = new Hero(front);
-// const leftHero = new Hero(left);
-// const rightHero = new Hero(right);
-// const backHero = new Hero(back);
-console.log(myHero);
+
 function moveHero(event) {
   const arrow = event.key;
   switch (arrow) {
@@ -59,7 +55,6 @@ function moveHero(event) {
   heroClass = divHero.classList[0];
   divHero.style.left = myHero.left + "px";
   divHero.style.bottom = myHero.bottom + "px";
-  console.log(divHero.style);
 }
 
 window.addEventListener("keydown", moveHero);
