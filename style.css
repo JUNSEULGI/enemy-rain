@@ -36,3 +36,10 @@
 .back-face {
   background-position: 105px 0;
 }
+
+.ghost {
+  height: 54px;
+  width: 45px;
+  background-image: url("images/enemy.png");
+  position: absolute;
+}
