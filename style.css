@@ -43,3 +43,7 @@
   background-image: url("images/enemy.png");
   position: absolute;
 }
+
+.ghostPang {
+  background-position: 45px 0;
+}

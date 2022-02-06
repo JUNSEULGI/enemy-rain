@@ -1,7 +1,5 @@
 // class Enemy {}
 
-function gameOver() {}
-
 function createGhost() {
   const ghostDiv = document.createElement("div");
   ghostDiv.className = "ghost";
@@ -13,19 +11,33 @@ function createGhost() {
 function moveGhost() {
   const ghostsArr = document.getElementsByClassName("ghost");
   const ghostsLeng = ghostsArr.length;
+
   if (ghostsLeng > 0) {
     for (let i = 0; i < ghostsLeng; i++) {
       const ghost = ghostsArr[i];
       let ghostTop = parseInt(ghost.style.top);
+
       if (ghostTop < 536) {
-        ghostTop += 10;
+        ghostTop += 15;
         ghost.style.top = ghostTop + "px";
+
+        // const ghostLeft = parseInt(ghost.style.left);
+        // const heroBottom = parseInt(divHero.style.bottom);
+        // const heroLeft = parseInt(divHero.style.left);
+
+        // if (
+        //   600 - ghostTop - 54 === heroBottom + 54 &&
+        //   ghostLeft + 45 === heroLeft
+        // ) {
+        //   ghost.classList.add("ghostPang");
+        // }
       } else {
-        gameOver();
+        clearInterval(createInterval);
+        clearInterval(moveInterval);
       }
     }
   }
 }
 
-setInterval(createGhost, 5000);
-setInterval(moveGhost, 1000);
+const createInterval = setInterval(createGhost, 8000);
+const moveInterval = setInterval(moveGhost, 1000);

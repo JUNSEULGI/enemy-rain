@@ -1,7 +1,5 @@
 const divHero = document.querySelector("#hero");
 
-let heroClass = "front-face";
-
 class Hero {
   constructor() {
     this.left = 383;
@@ -52,7 +50,6 @@ function moveHero(event) {
       myHero.moveDown();
       break;
   }
-  heroClass = divHero.classList[0];
   divHero.style.left = myHero.left + "px";
   divHero.style.bottom = myHero.bottom + "px";
 }
